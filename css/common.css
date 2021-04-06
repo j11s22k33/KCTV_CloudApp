@@ -1,0 +1,248 @@
+* {
+    position: absolute;
+    /*backface-visibility: hidden;*/
+}
+
+@font-face{
+    font-family:"RixHeadB";
+    src: local("RixHead B");
+    /*src: url("../font/RixHeadB_EU_11172.ttf");*/
+}
+
+@font-face{
+    font-family:"RixHeadEB";
+    src: local("RixHead EB");
+    /*src: url("../font/RixHeadEB_EU_11172.ttf");*/
+}
+
+@font-face{
+    font-family:"RixHeadL";
+    src: local("RixHead L");
+    /*src: url("../font/RixHeadL_EU_11172.ttf");*/
+}
+
+@font-face{
+    font-family:"RixHeadM";
+    src: local("RixHead M");
+    /*src: url("../font/RixHeadM_EU_11172.ttf");*/
+}
+
+.font_rixhead_bold {
+    font-family:'RixHeadB';
+    letter-spacing: -0.03em;
+}
+.font_rixhead_extrabold {
+    font-family:'RixHeadEB';
+    letter-spacing: -0.03em;
+}
+.font_rixhead_light {
+    font-family:'RixHeadL';
+    letter-spacing: -0.03em;
+}
+.font_rixhead_medium {
+    font-family:'RixHeadM';
+    letter-spacing: -0.03em;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position:absolute;
+}
+
+.bg_size {
+    left: 0px;
+    top: 0px;
+    width: 1280px;
+    height: 720px;
+}
+
+.bg_color {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.my_bg_color {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.line_1px {
+	background-color: rgb(40,40,40);
+}
+
+.popup_bg_color {
+    background-color: rgba(0,0,0,0.65);
+}
+
+.popup_bg_flex {
+    display:-webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.popup_comp_color {
+    background-color:rgb(43,41,44);
+}
+
+.popup_comp_border {
+    border-radius:5px;
+    border-color:rgb(43,41,44);
+}
+
+.popup_comp_flex {
+    min-width:300px;
+    display:-webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-left:10px;
+    padding-right:10px;
+    border-left:30px;
+    border-right:30px;
+    border-bottom:20px;
+    border-style:solid;
+    border-color:rgb(43,41,44);
+}
+
+.cut{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+
+.pr_cell_focused {
+    background-color:rgba(229,48,0,1);
+}
+
+.pr_cell_current {
+    background-color:rgba(255,255,255,0.25);
+    color:#EBEBEB;
+    font-family:"RixHeadM";
+    font-size:20px;
+}
+
+.pr_cell_normal {
+    background-color:rgba(255,255,255,0.08);
+    color:#A7A7A7;
+    font-family:"RixHeadL";
+    font-size:20px;
+}
+
+.pr_cell_prev {
+    background-color:rgba(255,255,255,0.15);
+    color:#A7A7A7;
+    font-family:"RixHeadL";
+    font-size:20px;
+}
+
+.strike {
+    position: relative;
+    display: inline-block;
+}
+.strike::before {
+    content: '';
+    border-bottom: 2px solid #DABC74;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+.strike_kids {
+    position: relative;
+    display: inline-block;
+}
+.strike_kids::before {
+    content: '';
+    border-bottom: 2px solid #FFE92B;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+.underline {
+	content: "";
+    display: inline;
+    width: 100%;
+    border-bottom: 1px solid #9e8e85;
+    margin: 1px 0px;
+}
+
+#loading {
+    left : 0px;top : 0px;width : 1280px;height : 720px;position : absolute; z-index : 200;
+    background-color:rgba(0,0,0,0.7);
+    display : none;
+}
+#loading #loading_img{
+    left : 580px;top : 338px;width : 121px;height : 44px;position : absolute; z-index : 200;
+    background-image:url('../img/loading_01.png');
+    -webkit-animation-name: loading;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function : step-end;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+}
+#loading #loading_text{
+    left : 328px;top : 320px;width : 145px;height : 24px;position : absolute; z-index : 200;
+}
+
+#loading_type_text {
+    left : 0px;top :0px;width : 1280px;height : 720px;position : absolute; z-index : 200;
+    background-color:rgba(0,0,0,0.85);
+    display : none;
+}
+#loading_type_text #loading_type_text_img{
+    left : 556px;top : 257px;width : 168px;height : 106px;position : absolute; z-index : 200;
+    background-image:url('../img/loading_01.png');
+    -webkit-animation-name: loading;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function : step-end;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-direction: normal;
+}
+#loading_type_text #loading_type_text_text1{
+    left : 0px;top : 375px;width : 1280px;height : 30px;position : absolute; z-index : 200;
+    color:rgb(255,255,255); font-family:"RixHeadB"; font-size:30px; text-align:center; letter-spacing:-1.5px;
+}
+#loading_type_text #loading_type_text_text2{
+    left : 0px;top : 423px;width : 1280px;height : 18px;position : absolute; z-index : 200;
+    color:rgba(255,255,255,0.5); font-family:"RixHeadM"; font-size:18px; text-align:center; letter-spacing:-0.9px;
+}
+
+@-webkit-keyframes loading {
+    from {background-image:url('../img/loading_01.png'); }
+    20% {background-image:url('../img/loading_02.png');}
+    40% {background-image:url('../img/loading_03.png');}
+    60% {background-image:url('../img/loading_04.png');}
+    80% {background-image:url('../img/loading_05.png');}
+    to {background-image:url('../img/loading_01.png');}
+}
+
+#loading_type_kids {
+    left : 0px;top : 0px;width : 1280px;height : 720px;position : absolute; z-index : 200;
+    background-color:rgba(0,0,0,0.7);
+    display : none;
+}
+#loading_type_kids #loading_kids_img{
+    left :580px;top : 338px;width : 121px;height : 44px;position : absolute; z-index : 200;
+    background-image:url('../img/loading_01.png');
+    -webkit-animation-name: loading_kids;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function : step-end;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+}
+
+@-webkit-keyframes loading_kids {
+    from {background-image:url('../img/loading_01.png'); }
+    20% {background-image:url('../img/loading_02.png');}
+    40% {background-image:url('../img/loading_03.png');}
+    60% {background-image:url('../img/loading_04.png');}
+    80% {background-image:url('../img/loading_05.png');}
+    to {background-image:url('../img/loading_01.png');}
+}
+
+#tmpCanvas {
+    letter-spacing : -0.03em;
+}

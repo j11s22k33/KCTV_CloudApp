@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>KCTV_2018</title>
+	<script language="javascript" src="./js/framework/jquery.min.js"></script>
+	<script language="javascript" src="./js/framework/jquery-qrcode-0.14.0.min.js"></script>
+	<script language="javascript" src="./prop/kctv.properties.js" charset="utf-8"></script>
+	<script>
+		var require = {
+			//module base
+			baseUrl: './js',
+			//module short cut path
+			paths: {
+			},
+			//external lib not support AMD
+			shim: {
+			},
+			// query setting to avoid browser cache
+			// if live environment , use version num. instead of time
+			urlArgs : 'ts=' + UI_VERSION
+		};
+	</script>
+	<script language="javascript" src="./js/framework/require.min.js"></script>
+	<script language="javascript" src="./js/framework/tv.js" charset="utf-8"></script>
+	<script language="javascript" src="./js/framework/comp.js" charset="utf-8"></script>
+	<script language="javascript" src="./js/lib/hmac-sha256.js" charset="utf-8"></script>
+	<script language="javascript" src="./js/preDefineModule.js" charset="utf-8"></script>
+	<script type="text/javascript">
+
+	function onload() {
+		(function(){
+			W.startApp({ sceneName:"scene/RootScene"});
+		})();
+	}
+	
+	function onCloudReceive(str){
+		try{
+			W.CloudManager.receive(str);
+		}catch(e){
+			
+		}
+	}
+	</script>
+</head>
+<body onload="onload()" style="overflow:hidden;width:1280px;height:720px">
+</body>
+</html>
