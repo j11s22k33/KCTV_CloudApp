@@ -701,48 +701,51 @@ W.defineModule("scene/RootScene", [ "mod/Config", "manager/TextManager", "manage
 				_this.error(ex);
 			}
 			
+			// TODO PC 셋팅
 			if(W.Config.DEVICE == "PC"){
-				W.StbConfig.accessToken = "00ND0QTUQQD6SV8AVMARMTQVJS";
-//				W.StbConfig.groupId = "000072";
-				W.StbConfig.cugType = "normal";
-				W.StbConfig.accountId = "30074315114821";
-				W.StbConfig.isLive = true;
-				
-//				W.StbConfig.accessToken = "03HQHGQS4B3PAECQMO9URAKH04";//testbed
-//				W.StbConfig.accountId = "30074315201469";//testbed
-//				W.StbConfig.groupId = undefined;
-//				W.StbConfig.cugType = "normal";
-//				W.StbConfig.isLive = false;
-				
-				
-				
-				W.StbConfig.localCode = "A118";
-//				W.StbConfig.isKidsMode = true;
-				W.StbConfig.isUHD = true;
-				W.StbConfig.menuLanguage = 1;
-				W.StbConfig.macAddress = "20d5bfdac0cf";
-				W.StbConfig.adultMenuUse = 1;
-				W.StbConfig.parentalRating = {rating:1, adultMenu:1};
-				W.StbConfig.userName = "길동";
-				W.StbConfig.favChCount = 0;
-				// 1: poster, 2: list
-				W.StbConfig.vodLookStyle = 1;
-				// 1: ?��?��, 2: ?��?��?��?��
-				W.StbConfig.vodContinuousPlay = 1;
-				// 1: -20, 2: -10, 3: 0, 4: 10, 5: 20
-				W.StbConfig.menuTransparency = 3;
-				W.StbConfig.rating = 0;
-				W.StbConfig.isCheckOut = false;
-				W.StbConfig.availableCheckIn = false;
-				//
-				// 1: 10�???????????????, 2: 30�???????????????, 3: 1�???????????????
-				W.StbConfig.menuDuration = 3;
-				W.StbConfig.blockVodPlay = false;
-				W.StbConfig.blockPurchase = false;
-				W.StbConfig.enableSubsCancelBtn = true;
-				W.StbConfig.kidsLimitVodCount = 2;
-				W.StbConfig.stbType = "ANDROID";
-				W.StbConfig.androidNoti = 7;
+				if(location.search.length === 0) {
+					W.StbConfig.accessToken = "00ND0QTUQQD6SV8AVMARMTQVJS";
+	//				W.StbConfig.groupId = "000072";
+					W.StbConfig.cugType = "normal";
+					W.StbConfig.accountId = "30074315114821";
+					W.StbConfig.isLive = true;
+					
+	//				W.StbConfig.accessToken = "03HQHGQS4B3PAECQMO9URAKH04";//testbed
+	//				W.StbConfig.accountId = "30074315201469";//testbed
+	//				W.StbConfig.groupId = undefined;
+	//				W.StbConfig.cugType = "normal";
+	//				W.StbConfig.isLive = false;
+					
+					
+					
+					W.StbConfig.localCode = "A118";
+	//				W.StbConfig.isKidsMode = true;
+					W.StbConfig.isUHD = true;
+					W.StbConfig.menuLanguage = 1;
+					W.StbConfig.macAddress = "20d5bfdac0cf";
+					W.StbConfig.adultMenuUse = 1;
+					W.StbConfig.parentalRating = {rating:1, adultMenu:1};
+					W.StbConfig.userName = "길동";
+					W.StbConfig.favChCount = 0;
+					// 1: poster, 2: list
+					W.StbConfig.vodLookStyle = 1;
+					// 1: ?��?��, 2: ?��?��?��?��
+					W.StbConfig.vodContinuousPlay = 1;
+					// 1: -20, 2: -10, 3: 0, 4: 10, 5: 20
+					W.StbConfig.menuTransparency = 3;
+					W.StbConfig.rating = 0;
+					W.StbConfig.isCheckOut = false;
+					W.StbConfig.availableCheckIn = false;
+					//
+					// 1: 10�???????????????, 2: 30�???????????????, 3: 1�???????????????
+					W.StbConfig.menuDuration = 3;
+					W.StbConfig.blockVodPlay = false;
+					W.StbConfig.blockPurchase = false;
+					W.StbConfig.enableSubsCancelBtn = true;
+					W.StbConfig.kidsLimitVodCount = 2;
+					W.StbConfig.stbType = "ANDROID";
+					W.StbConfig.androidNoti = 7;
+				}
 				// 1: LCW, 2: default
 				W.KEY.BACK = 8;
 				W.KEY.EXIT = 88;
